@@ -1,8 +1,6 @@
 # Kubernetes
 This repository will help you cross barriers with kubernetes
 
-# k8s-cluster-POC
-
 ## ISTIO ##
 
 **INSTALLATION:** 
