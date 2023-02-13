@@ -5248,7 +5248,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: cert-manager-cainjector
-          image: "292924757060.dkr.ecr.eu-west-1.amazonaws.com/cert-manager-cainjector"
+          image: "hub.docker/cert-manager-cainjector"
           imagePullPolicy: IfNotPresent
           args:
           # - --v=2
@@ -5310,7 +5310,7 @@ spec:
           type: FileOrCreate
       containers:
         - name: cert-manager-controller
-          image: "292924757060.dkr.ecr.eu-west-1.amazonaws.com/cert-manager-controller"
+          image: "hub.docker/cert-manager-controller"
           imagePullPolicy: IfNotPresent
           args:
           # - --v=2
@@ -5371,7 +5371,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: cert-manager-webhook
-          image: "292924757060.dkr.ecr.eu-west-1.amazonaws.com/cert-manager-webhook"
+          image: "hub.docker/cert-manager-webhook"
           imagePullPolicy: IfNotPresent
           args:
           # - --v=2

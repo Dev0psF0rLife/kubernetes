@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: loki-server
-          image: docker-remote.sarma.prz.hz.eu-west-1.aws.thales/grafana/loki
+          image: docker.hub/grafana/loki
           args:
             - "-config.file=/etc/loki/loki-config.yaml"
           ports:

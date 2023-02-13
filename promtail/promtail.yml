@@ -15,7 +15,7 @@ spec:
       serviceAccount: promtail-serviceaccount
       containers:
       - name: promtail-container
-        image: docker-remote.sarma.prz.hz.eu-west-1.aws.thales/grafana/promtail
+        image: hub.docker/grafana/promtail
         args:
         - -config.file=/etc/promtail/promtail.yaml
         env: 
@@ -92,7 +92,7 @@ data:
       grpc_listen_port: 0
 
     clients:
-    - url: http://10.187.192.55/loki/api/v1/push
+    - url: http://YOURLOKIENDPOINT/loki/api/v1/push
 
     positions:
       filename: /tmp/positions.yaml
