@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: vault-issuer
+  namespace: default 
+spec:
+  vault:
+    path: yourVaultRole
+   # path: aws
+    server: yourVaultServer.com
+    caBundle: YourCaBundleOnBase64
+    auth:
+      appRole:
+        path: approle
+        roleId: YourRoleIdOnVault # base64 encoded not needed
+        secretRef:
+          name: cert-manager-vault-token
+          key: secretId

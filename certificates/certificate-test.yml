@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: yourDns.com
+  namespace: default
+spec:
+  secretName: secret-tls
+  issuerRef:
+    name: vault-issuer 
+  commonName: yourDns.com
+  dnsNames:
+  - yourDns.com
