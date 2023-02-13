@@ -5,16 +5,14 @@ This repository will help you cross barriers with kubernetes
 
 **INSTALLATION:** 
 ```
-1. wget https://sarma.prz.hz.eu-west-1.aws.thales:443/artifactory/CASPR-tools/istio-1.16.0-linux-amd64.tar.gz
-2. tar -zxvf istio-1.16.0-linux-amd64.tar.gz
-3. cd istio-1.16.0-linux-amd64.tar.gz
-4. export PATH=$PWD/bin:$PATH
+1. curl -L https://istio.io/downloadIstio | sh -
+2. export PATH=$PWD/bin:$PATH
 ```
 Great, now you are able to execute istioctl commands.
 
 **Apply demo profile** _(this step will deploy a template with istio ingress,egress and istiod gateways. Also, this step will configure services for istio gateways)._
 ```
-1. istioctl install --set profile=demo -y --set hub=docker-remote.sarma.prz.hz.eu-west-1.aws.thales/istio
+1. istioctl install --set profile=demo -y --set hub=docker.io/istio
 ```
 
 ## CERT-MANAGER ##
